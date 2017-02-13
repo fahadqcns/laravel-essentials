@@ -32,3 +32,8 @@ Route::get('user/{name}', function ($name) {
 
     return $msg;
 })->where('name', '[A-Za-z]+');
+
+//
+Route::get('blade', function () {
+    return view('child', ['name' => 'Samantha']);
+});
